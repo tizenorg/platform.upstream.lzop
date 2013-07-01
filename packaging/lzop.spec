@@ -6,7 +6,7 @@ Summary:        lzop
 URL:            http://www.lzop.org
 Group:          Applications/Text
 Source:         %{name}-%{version}.tar.gz
-Source1001: packaging/lzop.manifest 
+Source1001: lzop.manifest 
 BuildRequires:  lzo
 BuildRequires:  lzo-devel
 
@@ -37,7 +37,7 @@ rm -rf %{buildroot}
 %docs_package 
 
 %files 
-%manifest lzop.manifest
+%manifest %{name}.manifest
 %defattr(-,root,root,-)
 %doc NEWS README COPYING
 %{_bindir}/*
